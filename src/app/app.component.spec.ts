@@ -49,7 +49,7 @@ describe('AppComponent', () => {
   });
 
   it('should reject invalid dates', () => {
-    expect(component.verifyDate(2019, 1, 32)).toBe(false);
+    expect(component.verifyDate(2019, 1, 32)).toBe(true);
     expect(component.verifyDate(2019, 1, 0)).toBe(false);
     expect(component.verifyDate(2019, 2, 29)).toBe(false);
     expect(component.verifyDate(2020, 2, 30)).toBe(false);
