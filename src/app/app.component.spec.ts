@@ -15,6 +15,8 @@ describe('AppComponent', () => {
     expect(component.isValidPesel('72021706812')).toBe(true);
     expect(component.isValidPesel('80042448774')).toBe(true);
     expect(component.isValidPesel('97031003029')).toBe(true);
+    expect(component.isValidPesel('01072696366')).toBe(true);
+    expect(component.isValidPesel('33413002857')).toBe(true);
   });
 
   it('should reject PESEL numbers with invalid controlNumber', () => {
@@ -27,6 +29,7 @@ describe('AppComponent', () => {
     expect(component.isValidPesel('96023007818')).toBe(false);
     expect(component.isValidPesel('96130207819')).toBe(false);
     expect(component.isValidPesel('96000207813')).toBe(false);
+    expect(component.isValidPesel('95022907815')).toBe(false);
     expect(component.isValidPesel('95022907815')).toBe(false);
   });
 
@@ -42,10 +45,13 @@ describe('AppComponent', () => {
     expect(component.verifyDate(2020, 2, 29)).toBe(true);
     expect(component.verifyDate(2020, 1, 1)).toBe(true);
     expect(component.verifyDate(2020, 12, 31)).toBe(true);
+    expect(component.verifyDate(2020, 4, 30)).toBe(true);
+    
   });
 
   it('should reject invalid dates', () => {
     expect(component.verifyDate(2019, 1, 32)).toBe(false);
+    expect(component.verifyDate(2019, 1, 0)).toBe(false);
     expect(component.verifyDate(2019, 2, 29)).toBe(false);
     expect(component.verifyDate(2020, 2, 30)).toBe(false);
     expect(component.verifyDate(2019, 3, 32)).toBe(false);
