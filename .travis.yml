@@ -7,10 +7,10 @@ addons:
   chrome: stable
 branches:
   only:
-  - master
+    - master
 before_script:
   - npm install -g @angular/cli
 script:
-- ng build --prod --base-href https://bamanczak.github.io/pesel/
-- ng lint
-- ng test --watch=false --browsers=ChromeHeadless 
+  - ng build --prod --base-href https://bamanczak.github.io/pesel/
+  - ng lint
+  - ng test --watch=false --browsers=ChromeHeadless
