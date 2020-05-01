@@ -44,6 +44,7 @@ describe('AppComponent', () => {
     expect(component.verifyDate(2019, 2, 28)).toBe(true);
     expect(component.verifyDate(2020, 2, 29)).toBe(true);
     expect(component.verifyDate(2020, 1, 1)).toBe(true);
+    expect(component.verifyDate(2020, 5, 5)).toBe(true);
     expect(component.verifyDate(2020, 12, 31)).toBe(true);
     expect(component.verifyDate(2020, 4, 30)).toBe(true);
   });
